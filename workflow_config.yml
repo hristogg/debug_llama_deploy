@@ -1,0 +1,18 @@
+name: testwork
+
+control-plane:
+  port: 8000
+
+default-service: testservicework
+
+services:
+  testservicework:  
+    name: Testing API Deployment
+    source:
+      type: local
+      name: src
+      includes:
+        - "*.py"
+        - "*.yaml"
+        - "*.env"
+    path: workflow:testworkflow
